@@ -28,50 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nTraiders = new System.Windows.Forms.NumericUpDown();
             this.lguildSize = new System.Windows.Forms.Label();
             this.cbtraiderEquials = new System.Windows.Forms.CheckBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.naltruist = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.ncheater = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.ndodger = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.nrandomTraider = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.nvindictive = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.nquirky = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.nmyOwn = new System.Windows.Forms.NumericUpDown();
             this.bcalculateBestTraider = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+            this.nYears = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.nTraiders)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naltruist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ncheater)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ndodger)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nrandomTraider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nvindictive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nquirky)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmyOwn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nYears)).BeginInit();
             this.SuspendLayout();
             // 
-            // numericUpDown1
+            // nTraiders
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(129, 10);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(55, 20);
-            this.numericUpDown1.TabIndex = 0;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.nTraiders.Location = new System.Drawing.Point(129, 10);
+            this.nTraiders.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nTraiders.Name = "nTraiders";
+            this.nTraiders.Size = new System.Drawing.Size(55, 20);
+            this.nTraiders.TabIndex = 0;
+            this.nTraiders.Value = new decimal(new int[] {
             60,
             0,
             0,
             0});
+            this.nTraiders.ValueChanged += new System.EventHandler(this.nTraiders_ValueChanged);
             // 
             // lguildSize
             // 
             this.lguildSize.AutoSize = true;
-            this.lguildSize.Location = new System.Drawing.Point(13, 12);
+            this.lguildSize.Location = new System.Drawing.Point(24, 11);
             this.lguildSize.Name = "lguildSize";
             this.lguildSize.Size = new System.Drawing.Size(61, 13);
             this.lguildSize.TabIndex = 1;
@@ -86,13 +95,25 @@
             this.cbtraiderEquials.TabIndex = 2;
             this.cbtraiderEquials.Text = "Случайное распределение по типу торговца";
             this.cbtraiderEquials.UseVisualStyleBackColor = true;
+            this.cbtraiderEquials.CheckedChanged += new System.EventHandler(this.cbtraiderEquials_CheckedChanged);
             // 
-            // numericUpDown2
+            // naltruist
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(129, 45);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 3;
+            this.naltruist.Location = new System.Drawing.Point(129, 45);
+            this.naltruist.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.naltruist.Name = "naltruist";
+            this.naltruist.Size = new System.Drawing.Size(55, 20);
+            this.naltruist.TabIndex = 3;
+            this.naltruist.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.naltruist.ValueChanged += new System.EventHandler(this.anyTraiders_ValueChanged);
             // 
             // label1
             // 
@@ -112,12 +133,23 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Кидал";
             // 
-            // numericUpDown3
+            // ncheater
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(129, 71);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown3.TabIndex = 5;
+            this.ncheater.Location = new System.Drawing.Point(129, 71);
+            this.ncheater.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.ncheater.Name = "ncheater";
+            this.ncheater.Size = new System.Drawing.Size(55, 20);
+            this.ncheater.TabIndex = 5;
+            this.ncheater.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.ncheater.ValueChanged += new System.EventHandler(this.anyTraiders_ValueChanged);
             // 
             // label3
             // 
@@ -128,12 +160,23 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Хитрецов";
             // 
-            // numericUpDown4
+            // ndodger
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(129, 97);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown4.TabIndex = 7;
+            this.ndodger.Location = new System.Drawing.Point(129, 97);
+            this.ndodger.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.ndodger.Name = "ndodger";
+            this.ndodger.Size = new System.Drawing.Size(55, 20);
+            this.ndodger.TabIndex = 7;
+            this.ndodger.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.ndodger.ValueChanged += new System.EventHandler(this.anyTraiders_ValueChanged);
             // 
             // label4
             // 
@@ -144,12 +187,23 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Непредсказуемых";
             // 
-            // numericUpDown5
+            // nrandomTraider
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(129, 122);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown5.TabIndex = 9;
+            this.nrandomTraider.Location = new System.Drawing.Point(129, 122);
+            this.nrandomTraider.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nrandomTraider.Name = "nrandomTraider";
+            this.nrandomTraider.Size = new System.Drawing.Size(55, 20);
+            this.nrandomTraider.TabIndex = 9;
+            this.nrandomTraider.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nrandomTraider.ValueChanged += new System.EventHandler(this.anyTraiders_ValueChanged);
             // 
             // label5
             // 
@@ -160,12 +214,23 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Злопамятных";
             // 
-            // numericUpDown6
+            // nvindictive
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(129, 148);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown6.TabIndex = 11;
+            this.nvindictive.Location = new System.Drawing.Point(129, 148);
+            this.nvindictive.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nvindictive.Name = "nvindictive";
+            this.nvindictive.Size = new System.Drawing.Size(55, 20);
+            this.nvindictive.TabIndex = 11;
+            this.nvindictive.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nvindictive.ValueChanged += new System.EventHandler(this.anyTraiders_ValueChanged);
             // 
             // label6
             // 
@@ -176,12 +241,23 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Ушлых";
             // 
-            // numericUpDown7
+            // nquirky
             // 
-            this.numericUpDown7.Location = new System.Drawing.Point(129, 174);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown7.TabIndex = 13;
+            this.nquirky.Location = new System.Drawing.Point(129, 174);
+            this.nquirky.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nquirky.Name = "nquirky";
+            this.nquirky.Size = new System.Drawing.Size(55, 20);
+            this.nquirky.TabIndex = 13;
+            this.nquirky.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nquirky.ValueChanged += new System.EventHandler(this.anyTraiders_ValueChanged);
             // 
             // label7
             // 
@@ -192,12 +268,13 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Своя стратегия";
             // 
-            // numericUpDown8
+            // nmyOwn
             // 
-            this.numericUpDown8.Location = new System.Drawing.Point(129, 200);
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown8.TabIndex = 15;
+            this.nmyOwn.Location = new System.Drawing.Point(129, 200);
+            this.nmyOwn.Name = "nmyOwn";
+            this.nmyOwn.Size = new System.Drawing.Size(55, 20);
+            this.nmyOwn.TabIndex = 15;
+            this.nmyOwn.ValueChanged += new System.EventHandler(this.anyTraiders_ValueChanged);
             // 
             // bcalculateBestTraider
             // 
@@ -209,39 +286,69 @@
             this.bcalculateBestTraider.UseVisualStyleBackColor = true;
             this.bcalculateBestTraider.Click += new System.EventHandler(this.bcalculateBestTraider_Click);
             // 
+            // nYears
+            // 
+            this.nYears.Location = new System.Drawing.Point(129, 226);
+            this.nYears.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nYears.Name = "nYears";
+            this.nYears.Size = new System.Drawing.Size(55, 20);
+            this.nYears.TabIndex = 18;
+            this.nYears.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(27, 226);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Число лет";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(817, 459);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.nYears);
             this.Controls.Add(this.bcalculateBestTraider);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.numericUpDown8);
+            this.Controls.Add(this.nmyOwn);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.numericUpDown7);
+            this.Controls.Add(this.nquirky);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.numericUpDown6);
+            this.Controls.Add(this.nvindictive);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.numericUpDown5);
+            this.Controls.Add(this.nrandomTraider);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.numericUpDown4);
+            this.Controls.Add(this.ndodger);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericUpDown3);
+            this.Controls.Add(this.ncheater);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.naltruist);
             this.Controls.Add(this.cbtraiderEquials);
             this.Controls.Add(this.lguildSize);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nTraiders);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nTraiders)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naltruist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ncheater)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ndodger)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nrandomTraider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nvindictive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nquirky)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmyOwn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nYears)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,24 +356,26 @@
 
         #endregion
 
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nTraiders;
         private System.Windows.Forms.Label lguildSize;
         private System.Windows.Forms.CheckBox cbtraiderEquials;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown naltruist;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown ncheater;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown ndodger;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.NumericUpDown nrandomTraider;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private System.Windows.Forms.NumericUpDown nvindictive;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
+        private System.Windows.Forms.NumericUpDown nquirky;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
+        private System.Windows.Forms.NumericUpDown nmyOwn;
         private System.Windows.Forms.Button bcalculateBestTraider;
+        private System.Windows.Forms.NumericUpDown nYears;
+        private System.Windows.Forms.Label label8;
     }
 }
 

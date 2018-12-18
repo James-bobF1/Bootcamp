@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Bootcamp
 {
@@ -19,15 +20,80 @@ namespace Bootcamp
             traidersOldValue = nTraiders.Value;
         }
 
-        private void bcalculateBestTraider_Click(object sender, EventArgs e)
+        private int InitialGuild()
         {
             guild = new Traider[(int)nTraiders.Value];
-            int pointer = 0;
+            int pointer = 0;// можно написать и использовать фабрику, но т.к. стратегий конечное число и они не формируются динамически не стал
             for (decimal i = 0; i < naltruist.Value; i++)
             {
-                guild[pointer] = new Altruist();
+                guild[pointer++] = new Altruist();
+            }
+            for (decimal i = 0; i < ncheater.Value; i++)
+            {
+                guild[pointer++] = new Cheater();
+            }
+            for (decimal i = 0; i < ndodger.Value; i++)
+            {
+                guild[pointer++] = new Dodger();
+            }
+            for (decimal i = 0; i < nrandomTraider.Value; i++)
+            {
+                guild[pointer++] = new RandomTrainer();
+            }
+            for (decimal i = 0; i < nvindictive.Value; i++)
+            {
+                guild[pointer++] = new Vindictive();
+            }
+            for (decimal i = 0; i < nquirky.Value; i++)
+            {
+                guild[pointer++] = new Quirky();
+            }
+            return pointer;
+        }
+
+        private void bcalculateBestTraider_Click(object sender, EventArgs e)
+        {
+            int pointer = InitialGuild();
+            Random rnd=new Random();
+            Graphics formGraphic = this.CreateGraphics();
+            Font aFont = new Font("Tahoma", 12, FontStyle.Regular);
+            Random rndColor = new Random();
+            decimal years = nYears.Value;
+            while (years >0)
+            {
+                //formGraphic.Clear(Form1.DefaultBackColor);
+                for (int i = 0; i < (10 - 5) / 2 * (pointer-1); i++)
+                {
+                    if (i % 20 == 0)
+                    {
+                        formGraphic.Clear(Form1.DefaultBackColor);
+                    }
+                    string log = Traider.Traide(guild[rnd.Next(pointer)], guild[rnd.Next(pointer)]);
+                    //Thread.Sleep(700);                    
+                }
+                //Thread.Sleep(1000);
+                formGraphic.Clear(Form1.DefaultBackColor);
+                Array.Sort(guild, delegate(Traider first, Traider second)
+                { return -first.Money + second.Money; }
+                );
+                formGraphic.DrawString("Top 20 Traiders year " + (nYears.Value-years+1), aFont, Brushes.Red, 280, 40);
+                for (int i = 0; i < pointer/3; i++)
+                {
+                    formGraphic.DrawString(guild[i].ToString(), aFont, Brushes.Green, 240, 60+20*i);
+                }
+                for (int i = 0; i < pointer / 3; i++)
+                {
+                    guild[pointer - pointer / 3 + i] = (Traider)(guild[i].GetType().GetConstructor(new Type[]{}).Invoke(new object[]{}));
+                }
+                for (int i = 0; i < pointer; i++)
+                {
+                    guild[i].NewYear();
+                }
+                years--;
+                Thread.Sleep(2000);                
             }
         }
+
 
         decimal TraidersNewValue
         {
@@ -93,7 +159,7 @@ namespace Bootcamp
                 {
                     if (numeric.GetType() == typeof(NumericUpDown))
                     {
-                        if (numeric.Name != nTraiders.Name)
+                        if (numeric.Name != nTraiders.Name&&numeric.Name!=nYears.Name)
                         {
                             ((NumericUpDown)numeric).Value = ((NumericUpDown)numeric).Minimum;
                             numeric.Enabled = false;
