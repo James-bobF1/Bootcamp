@@ -14,7 +14,7 @@ namespace Bootcamp
             count++;
             name = "Альтруист_" + count;
         }
-        public override TraideSolution Solution
+        protected override TraideSolution Solution
         {
             get
             {
