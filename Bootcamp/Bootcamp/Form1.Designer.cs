@@ -43,8 +43,6 @@
             this.nvindictive = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.nquirky = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.nmyOwn = new System.Windows.Forms.NumericUpDown();
             this.bcalculateBestTraider = new System.Windows.Forms.Button();
             this.nYears = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,7 +53,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nrandomTraider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nvindictive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nquirky)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmyOwn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nYears)).BeginInit();
             this.SuspendLayout();
             // 
@@ -259,23 +256,6 @@
             0});
             this.nquirky.ValueChanged += new System.EventHandler(this.anyTraiders_ValueChanged);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(24, 200);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Своя стратегия";
-            // 
-            // nmyOwn
-            // 
-            this.nmyOwn.Location = new System.Drawing.Point(129, 200);
-            this.nmyOwn.Name = "nmyOwn";
-            this.nmyOwn.Size = new System.Drawing.Size(55, 20);
-            this.nmyOwn.TabIndex = 15;
-            this.nmyOwn.ValueChanged += new System.EventHandler(this.anyTraiders_ValueChanged);
-            // 
             // bcalculateBestTraider
             // 
             this.bcalculateBestTraider.Location = new System.Drawing.Point(525, 10);
@@ -321,8 +301,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.nYears);
             this.Controls.Add(this.bcalculateBestTraider);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.nmyOwn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.nquirky);
             this.Controls.Add(this.label5);
@@ -347,7 +325,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nrandomTraider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nvindictive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nquirky)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmyOwn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nYears)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -371,8 +348,6 @@
         private System.Windows.Forms.NumericUpDown nvindictive;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown nquirky;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown nmyOwn;
         private System.Windows.Forms.Button bcalculateBestTraider;
         private System.Windows.Forms.NumericUpDown nYears;
         private System.Windows.Forms.Label label8;

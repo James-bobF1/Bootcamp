@@ -48,6 +48,7 @@ namespace Bootcamp
             {
                 guild[pointer++] = new Quirky();
             }
+            //оптимальная стратегия всегда жульничать. т.к. 1+4<2+5
             return pointer;
         }
 
@@ -99,7 +100,7 @@ namespace Bootcamp
         {
             get
             {
-                return naltruist.Value + ncheater.Value + ndodger.Value + nmyOwn.Value + nquirky.Value + nrandomTraider.Value + nvindictive.Value;
+                return naltruist.Value + ncheater.Value + ndodger.Value  + nquirky.Value + nrandomTraider.Value + nvindictive.Value;
             }
         }
 
@@ -116,7 +117,7 @@ namespace Bootcamp
                 {
                     if (!(decreateNumeric(naltruist) || decreateNumeric(ncheater) || decreateNumeric(ndodger)
                         || decreateNumeric(nrandomTraider) || decreateNumeric(nvindictive)
-                        || decreateNumeric(nquirky) || decreateNumeric(nmyOwn)))
+                        || decreateNumeric(nquirky)))
                     {
                         throw new ArgumentOutOfRangeException("Can't decreate any Traiders Types");
                     }
@@ -212,11 +213,6 @@ namespace Bootcamp
                     case 5:
                         {
                             nquirky.Value++;
-                            break;
-                        }
-                    case 6:
-                        {
-                            nmyOwn.Value++;
                             break;
                         }
                     default:
